@@ -155,6 +155,15 @@ class Instructor extends Lambdasian{
     this.catchPhrase = attributes.catchPhrase;
 
   }
+
+  demo(subject) {
+    return `Today we are learning about ${this.subject}`
+  }
+
+  grade(student, subject) {
+    return `{student.name} receives a perfect score on {subject}`
+  } 
+
 }
 
 /*
@@ -173,8 +182,13 @@ class Instructor extends Lambdasian{
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 
-class Student {
-   
+class Student extends Lambdasian {
+   constructor(attributes) {
+    super(attributes)
+    this.previousBackGround = attributes.previousBackGround;
+    this.className = attributes.className;
+    this.favSubjects = attributes.favSubjects; 
+   }
 }
 
 /*
@@ -191,7 +205,12 @@ class Student {
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager {
+class ProjectManager extends Instructor {
+  constructor(attributes) {
+    super(attributes)
+    this.gradClassName = attributes.gradClassName;
+    this.favInstructor = attributes.favInstructor;
+  }
    
 }
 
