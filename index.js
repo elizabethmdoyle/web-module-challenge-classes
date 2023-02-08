@@ -157,11 +157,11 @@ class Instructor extends Lambdasian{
   }
 
   demo(subject) {
-    return `Today we are learning about ${this.subject}`
+    return `Today we are learning about ${subject}`
   }
 
   grade(student, subject) {
-    return `{student.name} receives a perfect score on {subject}`
+    return `${student.name} receives a perfect score on ${subject}`
   } 
 
 }
@@ -185,9 +185,21 @@ class Instructor extends Lambdasian{
 class Student extends Lambdasian {
    constructor(attributes) {
     super(attributes)
-    this.previousBackGround = attributes.previousBackGround;
+    this.previousBackground = attributes.previousBackground;
     this.className = attributes.className;
     this.favSubjects = attributes.favSubjects; 
+   }
+
+   listSubjects(favSubjects) {
+    console.log(favSubjects)
+   }
+
+   PRAssignment() {
+    return `student.name has submitted a PR for {subject}`
+   }
+
+   sprintChallenge() {
+    
    }
 }
 
