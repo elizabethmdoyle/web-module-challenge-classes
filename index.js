@@ -191,15 +191,15 @@ class Student extends Lambdasian {
    }
 
    listSubjects(favSubjects) {
-    console.log(favSubjects)
+
    }
 
-   PRAssignment() {
-    return `student.name has submitted a PR for {subject}`
+   PRAssignment(subject) {
+    return `${this.name} has submitted a PR for ${subject}`
    }
 
-   sprintChallenge() {
-    
+   sprintChallenge(subject) {
+    return `${this.name} has begun sprint challenge on ${subject}`
    }
 }
 
@@ -222,6 +222,14 @@ class ProjectManager extends Instructor {
     super(attributes)
     this.gradClassName = attributes.gradClassName;
     this.favInstructor = attributes.favInstructor;
+  }
+
+  standUp(channel) {
+    return `${this.name} announces to ${channel}, @channel standy times!`
+  }
+
+  debugsCode(student, subject) {
+    return `${this.name} debugs ${student.name}'s code on ${subject}`
   }
    
 }
