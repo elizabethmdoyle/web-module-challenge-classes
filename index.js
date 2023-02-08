@@ -119,10 +119,12 @@ class Car {
 */
 
 class Lambdasian {
-  constructor(props) {
-    this.name = name;
-    this.age = age;
-    this.location = location;
+  constructor(attributes) {
+      
+    this.name = attributes.name;
+    this.age = attributes.age;
+    this.location = attributes.location; 
+    
 
   }
   
